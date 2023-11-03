@@ -16,6 +16,8 @@ public class PagoPrestamo_6 {
         tasaInteresesMensual = dato.nextDouble();
         System.out.println("Ingrese el plazo en meses");
         totalMeses = dato.nextDouble();
-        
+        double potencia = (Math.pow(1 + tasaInteresesMensual, totalMeses));
+        double rta = (montoPrestamo*(tasaInteresesMensual*potencia))/(potencia - 1);
+        System.out.println("La tasa a pagar va a ser: " + rta);
     }
 }
